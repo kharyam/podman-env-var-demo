@@ -16,18 +16,16 @@ ${REDHAT_REGISTRY_USERNAME:="PLEASE_SET_REGISTRY_USERNAME"}
 ${REDHAT_REGISTRY_PASSWORD:="PLEASE_SET_REGISTRY_PASSWORD"}
 
 POD_NAME=application-pod
-
 CONTAINER_NAME=psql-demo
 
 # Use demo magic script (https://github.com/paxtonhare/demo-magic) to simulate typing in the terminal via its 'pe' command
 . ~/bin/demo-magic.sh
 
+# Pre-cleanup
 podman stop $CONTAINER_NAME
 podman rmi $POSTGRESQL_IMAGE
 podman pod rm $POD_NAME
-
 sudo dnf install -y jq postgresql
-
 clear
 
 pe "podman images"
@@ -65,4 +63,4 @@ pe "podman pod stop $POD_NAME"
 
 pe "podman pod rm $POD_NAME" 
 
-pe "#"
+pe "# All Done"
