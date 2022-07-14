@@ -64,4 +64,4 @@ pe "podman pod stop $POD_NAME"
 
 pe "podman pod rm $POD_NAME" 
 
-pe "# All Done"
+pe "# 🎉🎉 All Done! 🎉🎉"
