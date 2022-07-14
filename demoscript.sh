@@ -23,7 +23,7 @@ CONTAINER_NAME=psql-demo
 
 # Pre-cleanup
 podman stop $CONTAINER_NAME
-podman rmi $POSTGRESQL_IMAGE
+podman rmi $POSTGRESQL_IMAGE nextcloud
 podman pod rm $POD_NAME
 sudo dnf install -y jq postgresql
 clear
