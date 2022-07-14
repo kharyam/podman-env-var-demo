@@ -17,6 +17,7 @@ REDHAT_REGISTRY_PASSWORD=${REDHAT_REGISTRY_PASSWORD:="PLEASE_SET_REGISTRY_PASSWO
 
 POD_NAME=application-pod
 CONTAINER_NAME=psql-demo
+VM_IP=$(hostname -I | awk '{print $1}')
 
 # Use demo magic script (https://github.com/paxtonhare/demo-magic) to simulate typing in the terminal via its 'pe' command
 . ~/bin/demo-magic.sh
