@@ -26,8 +26,9 @@ VM_IP=$(hostname -I | awk '{print $1}')
 podman stop $CONTAINER_NAME
 podman rmi $POSTGRESQL_IMAGE nextcloud
 podman pod rm $POD_NAME
-sudo dnf install -y jq postgresql
+sudo dnf install -y jq postgresql neofetch
 clear
+neofetch
 
 pe "podman images"
 
